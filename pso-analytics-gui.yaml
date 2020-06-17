@@ -15,7 +15,7 @@ metadata:
   name: pso-collect
 rules:
 - apiGroups: ["", "apps", "storage.k8s.io"]
-  resources: ["persistentvolumeclaims", "statefulsets", "deployments", "pods", "storageclasses"]
+  resources: ["persistentvolumes", "persistentvolumeclaims", "statefulsets", "deployments", "pods", "storageclasses"]
   verbs: ["get", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
