@@ -13,7 +13,7 @@ images:
     pullPolicy: IfNotPresent
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 
 # specify the service account name for this app
