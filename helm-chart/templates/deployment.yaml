@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "pso-analytics-gui.fullname" . }}
-  namespace: {{ include .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app.kubernetes.io/name: {{ include "pso-analytics-gui.name" . }}
     helm.sh/chart: {{ include "pso-analytics-gui.chart" . }}
@@ -20,10 +20,11 @@ spec:
         app.kubernetes.io/name: {{ include "pso-analytics-gui.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ .Values.clusterrolebinding.serviceAccount.name }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.images.pso-analytics-gui.repository }}:{{ .Values.images.pso-analytics-gui.tag }}"
-          imagePullPolicy: {{ .Values.images.pso-analytics-gui.pullPolicy }}
+          image: "{{ .Values.images.webserver.repository }}:{{ .Values.images.webserver.tag }}"
+          imagePullPolicy: {{ .Values.images.webserver.pullPolicy }}
           ports:
             - name: http
               containerPort: 80
@@ -40,7 +41,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
         - name: redis
           image: "{{ .Values.images.redis.repository }}:{{ .Values.images.redis.tag }}"
-          imagePullPolicy: {{ .Values.images.pso-analytics-gui.pullPolicy }}
+          imagePullPolicy: {{ .Values.images.redis.pullPolicy }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

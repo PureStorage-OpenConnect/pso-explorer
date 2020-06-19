@@ -1,0 +1,57 @@
+# This YAML file contains all RBAC objects that are necessary to run 
+# PSO Analytics GUI and collect the required cluster information.
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ .Values.clusterrolebinding.serviceAccount.name }}
+  namespace: {{ .Release.Namespace }}
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pso-analytics-objects
+rules:
+- apiGroups: ["", "apps", "storage.k8s.io"]
+  resources: ["persistentvolumes", "persistentvolumeclaims", "statefulsets", "deployments", "pods", "storageclasses"]
+  verbs: ["list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pso-analytics-secrets
+rules:
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pso-analytics-objects
+  namespace: {{ .Release.Namespace }}
+subjects:
+- kind: ServiceAccount
+  name: {{ .Values.clusterrolebinding.serviceAccount.name }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: pso-analytics-objects
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pso-analytics-secrets
+  namespace: {{ .Release.Namespace }}
+subjects:
+- kind: ServiceAccount
+  name: {{ .Values.clusterrolebinding.serviceAccount.name }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: pso-analytics-secrets
+  apiGroup: rbac.authorization.k8s.io
