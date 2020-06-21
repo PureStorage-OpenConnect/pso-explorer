@@ -1,4 +1,4 @@
-# [WIP] Pure Service Orchestrator (PSO) Analytics GUI
+# Pure Service Orchestrator (PSO) Analytics GUI
 
 ## What is PSO Analytics GUI?
 PSO Analytics GUI provides a web based GUI for [Pure Storage PSO](https://github.com/purestorage/helm-charts). It shows details of the volumes that have been provisioned using PSO. 
