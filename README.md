@@ -45,13 +45,13 @@ kubectl create namespace <namespace>
 #### Install with default settings
 
 ```bash
-helm install pso-analytics-gui pso-analytics-gui/pso-analytics-gui --namespace <namespace>
+helm install pso-analytics-gui pso-analytics/pso-analytics-gui --namespace <namespace>
 ```
 
 #### Install with changed settings (values.yaml)
 
 ```bash
-helm install pso-analytics-gui pso-analytics-gui/pso-analytics-gui --namespace <namespace> -f <your_own_dir>/yourvalues.yaml
+helm install pso-analytics-gui pso-analytics/pso-analytics-gui --namespace <namespace> -f <your_own_dir>/yourvalues.yaml
 ```
 
 The values in your values.yaml overwrite the ones in helm-chart/pso-analytics-gui/values.yaml.
