@@ -57,7 +57,11 @@ helm install pso-analytics-gui pso-analytics/pso-analytics-gui --namespace <name
 The values in your values.yaml overwrite the ones in helm-chart/pso-analytics-gui/values.yaml.
 
 ## Using PSO Analytics GUI
+To access PSO Analytics GUI, use the following command to reveal the IP address assigned to the service.
 
 ```bash
 kubectl get service -n <namespace>
 ```
+Now use a browser to connect to the IP address and port number:
+```bash
+http://<ip address>:<port>/
