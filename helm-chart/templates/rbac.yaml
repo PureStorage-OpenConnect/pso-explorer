@@ -15,7 +15,7 @@ metadata:
 rules:
 - apiGroups: ["", "apps", "storage.k8s.io"]
   resources: ["persistentvolumes", "persistentvolumeclaims", "statefulsets", "deployments", "pods", "storageclasses"]
-  verbs: ["list"]
+  verbs: ["get","list"]
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
