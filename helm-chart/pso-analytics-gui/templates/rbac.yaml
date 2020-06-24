@@ -14,7 +14,7 @@ metadata:
   name: pso-analytics-core
 rules:
 - apiGroups: [""]
-  resources: ["persistentvolumeclaims", "pods"]
+  resources: ["persistentvolumeclaims", "pods", "persistentvolumes"]
   verbs: ["get","list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -32,7 +32,7 @@ metadata:
   name: pso-analytics-storage
 rules:
 - apiGroups: ["storage.k8s.io"]
-  resources: ["persistentvolumes", "storageclasses"]
+  resources: ["storageclasses"]
   verbs: ["get","list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
