@@ -41,7 +41,7 @@ metadata:
   name: pso-analytics-snapshot
 rules:
 - apiGroups: ["snapshot.storage.k8s.io"]
-  resources: ["volumesnapshot", "volumesnapshotclass"]
+  resources: ["volumesnapshots", "volumesnapshotclasses"]
   verbs: ["get","list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
