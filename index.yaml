@@ -3,7 +3,22 @@ entries:
   pso-analytics-gui:
   - apiVersion: v1
     appVersion: latest
-    created: 2020-07-06T17:01:09.191099+02:00
+    created: 2020-07-06T17:05:39.785984+02:00
+    description: A Helm chart for PSO Analytics GUI
+    digest: 178c8a2726f43bb0ec803dccdbc04b25ce2165e372fef0157647f2342ace0494
+    icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
+    keywords:
+    - purestorage
+    maintainers:
+    - email: rdeenik@purestorage.com
+      name: Remko Deenik
+    name: pso-analytics-gui
+    urls:
+    - pso-analytics-gui-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: latest
+    created: 2020-07-06T17:05:39.784984+02:00
     description: A Helm chart for PSO Analytics GUI
     digest: a448195bf345d2a4714633c866059219610aea3c07514910327a663d77841998
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
@@ -18,7 +33,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: 0.4.3
-    created: 2020-07-06T17:01:09.190114+02:00
+    created: 2020-07-06T17:05:39.783033+02:00
     description: A Helm chart for PSO Analytics GUI
     digest: 57cb04a37d3e6629962b69699a38a097e541802ed748c6c25058467ac6d55e62
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
@@ -33,7 +48,7 @@ entries:
     version: 0.4.3
   - apiVersion: v1
     appVersion: 0.4.2
-    created: 2020-07-06T17:01:09.188271+02:00
+    created: 2020-07-06T17:05:39.781574+02:00
     description: A Helm chart for PSO Analytics GUI
     digest: 9be4365655c7ae0c7e8ed274022c9dc645e41547c9596a598b6a5265b80c7baf
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
@@ -46,4 +61,4 @@ entries:
     urls:
     - pso-analytics-gui-0.4.2.tgz
     version: 0.4.2
-generated: 2020-07-06T17:01:09.185257+02:00
+generated: 2020-07-06T17:05:39.779126+02:00
