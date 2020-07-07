@@ -2,7 +2,7 @@ apiVersion: v1
 description: A Helm chart for PSO Analytics GUI
 name: pso-analytics-gui
 appVersion: "latest"
-version: 1.0.4
+version: 1.0.5
 icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
 keywords:
 - purestorage
