@@ -33,10 +33,12 @@ spec:
             httpGet:
               path: /
               port: http
+              timeoutSeconds: 10s
           readinessProbe:
             httpGet:
               path: /
               port: http
+              timeoutSeconds: 10s
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
         - name: redis
