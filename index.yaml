@@ -3,9 +3,9 @@ entries:
   pso-analytics-gui:
   - apiVersion: v1
     appVersion: latest
-    created: 2020-07-07T10:26:51.205851+02:00
+    created: 2020-07-07T10:30:00.202916+02:00
     description: A Helm chart for PSO Analytics GUI
-    digest: 40e29e1113c81e35d84e1450da31e8804cd4cf0411e8c7bede169750241270a4
+    digest: e74fca410e6b91efb4d3e04ffede84db8a5e02cef90a482436139bd783a5c8ea
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
     keywords:
     - purestorage
@@ -18,7 +18,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: latest
-    created: 2020-07-07T10:26:51.204823+02:00
+    created: 2020-07-07T10:30:00.202051+02:00
     description: A Helm chart for PSO Analytics GUI
     digest: 178c8a2726f43bb0ec803dccdbc04b25ce2165e372fef0157647f2342ace0494
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
@@ -33,7 +33,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: latest
-    created: 2020-07-07T10:26:51.202979+02:00
+    created: 2020-07-07T10:30:00.200628+02:00
     description: A Helm chart for PSO Analytics GUI
     digest: a448195bf345d2a4714633c866059219610aea3c07514910327a663d77841998
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
@@ -46,34 +46,4 @@ entries:
     urls:
     - pso-analytics-gui-1.0.0.tgz
     version: 1.0.0
-  - apiVersion: v1
-    appVersion: 0.4.3
-    created: 2020-07-07T10:26:51.200531+02:00
-    description: A Helm chart for PSO Analytics GUI
-    digest: 57cb04a37d3e6629962b69699a38a097e541802ed748c6c25058467ac6d55e62
-    icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
-    keywords:
-    - purestorage
-    maintainers:
-    - email: rdeenik@purestorage.com
-      name: Remko Deenik
-    name: pso-analytics-gui
-    urls:
-    - pso-analytics-gui-0.4.3.tgz
-    version: 0.4.3
-  - apiVersion: v1
-    appVersion: 0.4.2
-    created: 2020-07-07T10:26:51.198055+02:00
-    description: A Helm chart for PSO Analytics GUI
-    digest: 9be4365655c7ae0c7e8ed274022c9dc645e41547c9596a598b6a5265b80c7baf
-    icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-analytics-gui/master/helm-chart/pure-storage.png
-    keywords:
-    - purestorage
-    maintainers:
-    - email: rdeenik@purestorage.com
-      name: Remko Deenik
-    name: pso-analytics-gui
-    urls:
-    - pso-analytics-gui-0.4.2.tgz
-    version: 0.4.2
-generated: 2020-07-07T10:26:51.195518+02:00
+generated: 2020-07-07T10:30:00.198424+02:00
