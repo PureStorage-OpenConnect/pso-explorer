@@ -14,7 +14,7 @@ metadata:
   name: pso-analytics-core
 rules:
 - apiGroups: [""]
-  resources: ["persistentvolumeclaims", "pods", "persistentvolumes"]
+  resources: ["persistentvolumeclaims", "pods", "persistentvolumes", "nodes"]
   verbs: ["get","list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
