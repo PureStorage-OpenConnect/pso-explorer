@@ -3,9 +3,9 @@ entries:
   pure-container-explorer:
   - apiVersion: v1
     appVersion: latest
-    created: 2020-07-10T21:01:06.436805+02:00
+    created: 2020-07-10T21:05:58.856481+02:00
     description: A Helm chart for Pure Container Explorer
-    digest: e2d6aea16b1090531fc76b23671e505b69bc45ec0bf9d5c4cae8b65c98d9ad93
+    digest: 26fe7e0a6a5b0c28a1f5a210a005ff8da425f550651e7c1f7749d6530a3984fe
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pure-container-explorer/master/helm-chart/pure-storage.png
     keywords:
     - purestorage
@@ -16,4 +16,4 @@ entries:
     urls:
     - pure-container-explorer-1.0.8.tgz
     version: 1.0.8
-generated: 2020-07-10T21:01:06.43548+02:00
+generated: 2020-07-10T21:05:58.85514+02:00
