@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "pure-container-explorer.fullname" . }}
+  name: {{ include "pure-container-explorer.name" . }}
   labels:
     app.kubernetes.io/name: {{ include "pure-container-explorer.name" . }}
     helm.sh/chart: {{ include "pure-container-explorer.chart" . }}
