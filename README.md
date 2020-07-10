@@ -15,9 +15,9 @@ Pure Container Explorer provides a web based user interface for [Pure Service Or
 Add the Pure Container Explorer helm chart repository to your Helm3 repo's:
 
 ```bash
-helm repo add pce-repo 'https://raw.githubusercontent.com/PureStorage-OpenConnect/pure-container-explorer/master/'
+helm repo add pure-explorer 'https://raw.githubusercontent.com/PureStorage-OpenConnect/pure-container-explorer/master/'
 helm repo update
-helm search repo pure-container-explorer -l
+helm search repo pure-explorer -l
 ```
 
 ### Configuration (optional)
@@ -48,13 +48,13 @@ kubectl create namespace <namespace>
 #### Install with default settings
 
 ```bash
-helm install pure-container-explorer pce-repo/pure-container-explorer --namespace <namespace>
+helm install pure-explorer pure-explorer/pure-container-explorer --namespace <namespace>
 ```
 
 #### Install with changed settings (values.yaml)
 
 ```bash
-helm install pure-container-explorer pce-repo/pure-container-explorer --namespace <namespace> -f <your_own_dir>/yourvalues.yaml
+helm install pure-explorer pure-explorer/pure-container-explorer --namespace <namespace> -f <your_own_dir>/yourvalues.yaml
 ```
 
 The values in your values.yaml overwrite the ones in helm-chart/pure-container-explorer/values.yaml.
