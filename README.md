@@ -1,4 +1,4 @@
-# Pure Container Explorer for 
+# Pure Container Explorer
 
 A unified view into container storage, empowering Kubernetes admins and storage admins with 360-degree container storage visibility.
 
