@@ -1,5 +1,5 @@
 # This YAML file contains all RBAC objects that are necessary to run 
-# PSO Analytics GUI and collect the required cluster information.
+# Pure Container Explorer and collect the required cluster information.
 
 apiVersion: v1
 kind: ServiceAccount
@@ -11,7 +11,7 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-core
+  name: pure-container-explorer-core
 rules:
 - apiGroups: [""]
   resources: ["persistentvolumeclaims", "pods", "persistentvolumes", "nodes", "pods/log"]
@@ -20,7 +20,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-apps
+  name: pure-container-explorer-apps
 rules:
 - apiGroups: ["apps"]
   resources: ["statefulsets", "deployments"]
@@ -29,7 +29,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-jobs
+  name: pure-container-explorer-jobs
 rules:
 - apiGroups: ["batch"]
   resources: ["jobs"]
@@ -38,7 +38,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-storage
+  name: pure-container-explorer-storage
 rules:
 - apiGroups: ["storage.k8s.io"]
   resources: ["storageclasses"]
@@ -47,7 +47,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-snapshot
+  name: pure-container-explorer-snapshot
 rules:
 - apiGroups: ["snapshot.storage.k8s.io"]
   resources: ["volumesnapshots", "volumesnapshotclasses"]
@@ -56,7 +56,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-api
+  name: pure-container-explorer-api
 rules:
 - apiGroups: ["apiregistration.k8s.io"]
   resources: ["apiservices"]
@@ -65,7 +65,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pso-analytics-secrets
+  name: pure-container-explorer-secrets
 rules:
 - apiGroups: [""]
   resources: ["secrets"]
@@ -74,7 +74,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-core
+  name: pure-container-explorer-core
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -82,13 +82,13 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-core
+  name: pure-container-explorer-core
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-apps
+  name: pure-container-explorer-apps
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -96,13 +96,13 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-apps
+  name: pure-container-explorer-apps
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-jobs
+  name: pure-container-explorer-jobs
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -110,13 +110,13 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-jobs
+  name: pure-container-explorer-jobs
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-storage
+  name: pure-container-explorer-storage
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -124,13 +124,13 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-storage
+  name: pure-container-explorer-storage
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-snapshot
+  name: pure-container-explorer-snapshot
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -138,13 +138,13 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-snapshot
+  name: pure-container-explorer-snapshot
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-api
+  name: pure-container-explorer-api
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -152,13 +152,13 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-api
+  name: pure-container-explorer-api
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pso-analytics-secrets
+  name: pure-container-explorer-secrets
   namespace: {{ .Release.Namespace }}
 subjects:
 - kind: ServiceAccount
@@ -166,5 +166,5 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: pso-analytics-secrets
+  name: pure-container-explorer-secrets
   apiGroup: rbac.authorization.k8s.io

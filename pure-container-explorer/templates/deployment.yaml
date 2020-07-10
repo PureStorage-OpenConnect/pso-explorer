@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "pso-analytics-gui.fullname" . }}
+  name: {{ include "pure-container-explorer.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app.kubernetes.io/name: {{ include "pso-analytics-gui.name" . }}
-    helm.sh/chart: {{ include "pso-analytics-gui.chart" . }}
+    app.kubernetes.io/name: {{ include "pure-container-explorer.name" . }}
+    helm.sh/chart: {{ include "pure-container-explorer.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "pso-analytics-gui.name" . }}
+      app.kubernetes.io/name: {{ include "pure-container-explorer.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "pso-analytics-gui.name" . }}
+        app.kubernetes.io/name: {{ include "pure-container-explorer.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       serviceAccountName: {{ .Values.clusterrolebinding.serviceAccount.name }}

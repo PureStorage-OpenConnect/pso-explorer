@@ -4,7 +4,7 @@
 
 images:
   webserver:
-    repository: quay.io/purestorage/pso-analytics-gui
+    repository: quay.io/purestorage/pure-container-explorer
     tag: latest
     pullPolicy: Always
   redis:
@@ -19,7 +19,7 @@ service:
 # specify the service account name for this app
 clusterrolebinding:
   serviceAccount:
-    name: pso-analytics
+    name: pure-container-explorer
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
