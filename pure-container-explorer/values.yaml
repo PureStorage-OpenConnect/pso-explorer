@@ -4,7 +4,7 @@
 
 images:
   webserver:
-    repository: quay.io/purestorage/pure-container-explorer
+    repository: quay.io/purestorage/pso-analytics-gui
     tag: latest
     pullPolicy: Always
   redis:
