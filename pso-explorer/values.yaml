@@ -1,4 +1,4 @@
-# Default values for pso-analytics-gui.
+# Default values for pso-explorer.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -19,7 +19,7 @@ service:
 # specify the service account name for this app
 clusterrolebinding:
   serviceAccount:
-    name: pure-container-explorer
+    name: pso-explorer
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
