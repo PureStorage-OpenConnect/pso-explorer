@@ -1,0 +1,8 @@
+{
+    "id": "pso-explorer",
+    "name": "PSO Explorer",
+    "filter": "devops",
+    "image": "http://code.purestorage.com/images/35_PSOX.png",
+    "featured": 1,
+    "priority": 1
+}
