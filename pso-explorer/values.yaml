@@ -12,6 +12,7 @@ images:
     tag: alpine
     pullPolicy: IfNotPresent
 
+# service.type can be LoadBalancer or ClusterIP
 service:
   type: LoadBalancer
   port: 80
