@@ -4,8 +4,8 @@
 
 images:
   webserver:
-    repository: quay.io/purestorage/pso-analytics-gui
-    tag: latest
+    repository: quay.io/purestorage/pso-explorer
+    tag: v0.5.0
     pullPolicy: Always
   redis:
     repository: redis
