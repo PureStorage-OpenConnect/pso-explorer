@@ -1,8 +1,6 @@
 [![Apache License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/LICENSE)
-[![GitHub Release](https://img.shields.io/github/release/PureStorage-OpenConnect/pso-explorer.svg?style=flat)]()  
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat)]()
+[![GitHub Release](https://img.shields.io/github/release/PureStorage-OpenConnect/pso-explorer.svg?style=flat)]()
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![Issues](https://img.shields.io/github/issues-raw/PureStorage-OpenConnect/pso-explorer.svg?maxAge=25000)](https://github.com/PureStorage-OpenConnect/pso-explorer/issues)  
 
 # Pure Service Orchestrator™ Explorer
 
