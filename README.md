@@ -1,4 +1,4 @@
-# Pure Service Orchestrator™ Explorer
+# Pure Service Orchestrator Explorer
 
 A unified view into storage, empowering Kubernetes admins and storage admins with 360-degree container storage visibility.
 
