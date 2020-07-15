@@ -4,7 +4,7 @@ A unified view into storage, empowering Kubernetes admins and storage admins wit
 
 ## What is PSO Explorer?
 
-Pure Service Orchestrator™ Explorer (or PSO Explorer) provides a web based user interface for [Pure Service Orchestrator™ PSO](https://github.com/purestorage/helm-charts). It shows details of the persistent volumes and snapshots that have been provisioned using PSO, showing provisioned space, actual used space, performance and growth characteristics. The PSO Explorer dashboard provides a quick overview of the number of volumes, snapshots, storageclasses and arrays in the cluster, in addition to the volume usage, the volume growth over the last 24 hours and cluster-level performance statistics.
+Pure Service Orchestrator™ Explorer (or PSO Explorer) provides a web based user interface for [Pure Service Orchestrator™](https://github.com/purestorage/helm-charts). It shows details of the persistent volumes and snapshots that have been provisioned using PSO, showing provisioned space, actual used space, performance and growth characteristics. The PSO Explorer dashboard provides a quick overview of the number of volumes, snapshots, storageclasses and arrays in the cluster, in addition to the volume usage, the volume growth over the last 24 hours and cluster-level performance statistics.
 
 ## Software Pre-Requisites
 - [Kubernetes](https://kubernetes.io/) 1.13+
