@@ -47,7 +47,7 @@ For security reason, it is strongly recommended to install PSO Explorer in a sep
 kubectl create namespace <namespace>
 ```
 
-###Run the Install
+### Run the Install
 
 #### Install with default settings
 
