@@ -52,13 +52,13 @@ kubectl create namespace <namespace>
 #### Install with default settings
 
 ```bash
-helm install pure-explorer pure-explorer/pso-explorer --namespace <namespace>
+helm install pso-explorer pure-explorer/pso-explorer --namespace <namespace>
 ```
 
 #### Install with changed settings (values.yaml)
 
 ```bash
-helm install pure-explorer pure-explorer/pso-explorer --namespace <namespace> -f <your_own_dir>/yourvalues.yaml
+helm install pso-explorer pure-explorer/pso-explorer --namespace <namespace> -f <your_own_dir>/yourvalues.yaml
 ```
 
 The values in your values.yaml overwrite the ones in helm-chart/pso-explorer/values.yaml.
