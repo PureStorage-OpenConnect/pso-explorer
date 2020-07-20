@@ -33,17 +33,27 @@ spec:
             httpGet:
               path: /
               port: http
-            timeoutSeconds: 10
+            timeoutSeconds: 30
           readinessProbe:
             httpGet:
               path: /
               port: http
-            timeoutSeconds: 10
+            timeoutSeconds: 30
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
         - name: redis
           image: "{{ .Values.images.redis.repository }}:{{ .Values.images.redis.tag }}"
           imagePullPolicy: {{ .Values.images.redis.pullPolicy }}
+          command:
+            - redis-server
+            - "/usr/local/etc/redis/redis.conf"
+          volumeMounts:
+            - name: redis-config
+              mountPath: /usr/local/etc/redis
+      volumes:
+        - name: redis-config
+          configMap:
+            name: {{ include "pso-explorer.fullname" . }}-redis
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

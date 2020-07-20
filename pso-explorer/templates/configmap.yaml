@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "pso-explorer.fullname" . }}-redis
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ template "pso-explorer.name" . }}
+    chart: {{ template "pso-explorer.chart" . }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+data:
+  redis.conf: |-
+    # User-supplied configuration:
+    save ""
