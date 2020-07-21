@@ -21,7 +21,7 @@ Add the PSO Explorer helm chart repository to your Helm3 repo's:
 ```bash
 helm repo add pso-explorer 'https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/'
 helm repo update
-helm search repo pso-explorer -l
+helm search repo pso-explorer
 ```
 
 ### Configuration (optional)
