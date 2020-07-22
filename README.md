@@ -25,7 +25,7 @@ helm search repo pso-explorer
 ```
 
 ### Configuration (optional)
-You can change the configuraton of the deployment, by downloading the [./helm-chart/pso-explorer/values.yaml](./helm-chart/pso-explorer/values.yaml) file and changing the deployment settings. The following table lists the configurable parameters and their default values.
+You can change the configuraton of the deployment, by downloading the [./pso-explorer/values.yaml](./helm-chart/pso-explorer/values.yaml) file and changing the deployment settings. The following table lists the configurable parameters and their default values.
 
 | Parameter                                      | Description                                                                                                                                                | Default                                       |
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
