@@ -63,6 +63,28 @@ helm install pso-explorer pso-explorer/pso-explorer --namespace <namespace> -f <
 
 The values in your values.yaml overwrite the ones in helm-chart/pso-explorer/values.yaml.
 
+## How to upgrade
+To upgrade your existing PSO Exporer installation to a new version, follow these steps:
+
+```bash
+helm repo update
+helm search repo pso-explorer
+```
+The search command will return the latest version of the Helm Chart.
+
+If you do not know the Helm deployment name you used to deploy PSO Explorer, use the following:
+
+```bash
+helm list -A |grep pso-explorer
+```
+The first column returned is the Helm deployment name you used and the second column is the namespace PSO Explorer was deployed in.
+Now you can run the update as follows:
+
+```bash
+helm upgrade pso-explorer -n pso-explorer pso-explorer/pso-explorer
+```
+Make sure you replace the first occurance of `pso-explorer` with your Helm deployment name and `-n pso-explorer` with the namespace you've deployed PSO Explorer in.
+
 ## Using PSO Explorer
 To access PSO Explorer, use the following command to reveal the IP address assigned to the service.
 
