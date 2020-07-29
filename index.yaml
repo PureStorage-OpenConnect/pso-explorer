@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   pso-explorer:
   - apiVersion: v1
-    appVersion: 0.5.3-devel
-    created: "2020-07-20T16:55:05.387402+02:00"
+    appVersion: 0.5.4-devel
+    created: "2020-07-28T16:50:23.407586+02:00"
     description: A Helm chart for Pure Service Orchestrator Explorer
-    digest: 10c17a214207e19c9f1b6f8cc92a556dba590a13fbbfd6b2e238f4c2d20197ca
+    digest: 4070b856227531d1fc89b071c53d4007c14b455b234733080fe5d56a08206f22
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/pso-explorer.png
     keywords:
     - purestorage
@@ -14,11 +14,26 @@ entries:
       name: Remko Deenik
     name: pso-explorer
     urls:
-    - pso-explorer-0.5.3-devel.tgz
-    version: 0.5.3-devel
+    - pso-explorer-0.5.4-devel.tgz
+    version: 0.5.4-devel
+  - apiVersion: v1
+    appVersion: 0.5.3
+    created: "2020-07-28T16:50:23.406871+02:00"
+    description: A Helm chart for Pure Service Orchestrator Explorer
+    digest: 054e7f7f8bca294549a6cdf5ecbfa42c1402a8b3147c2156c746d1aad46273ee
+    icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/pso-explorer.png
+    keywords:
+    - purestorage
+    maintainers:
+    - email: pso-explorer@purestorage.com
+      name: Remko Deenik
+    name: pso-explorer
+    urls:
+    - pso-explorer-0.5.3.tgz
+    version: 0.5.3
   - apiVersion: v1
     appVersion: v0.5.2
-    created: "2020-07-20T16:55:05.391712+02:00"
+    created: "2020-07-28T16:50:23.409487+02:00"
     description: A Helm chart for Pure Service Orchestrator Explorer
     digest: 503b4d4b47183395b76fb9355e2361f867db855c320197d3b10c149889149570
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/pso-explorer.png
@@ -33,7 +48,7 @@ entries:
     version: v0.5.2
   - apiVersion: v1
     appVersion: v0.5.1
-    created: "2020-07-20T16:55:05.388592+02:00"
+    created: "2020-07-28T16:50:23.408549+02:00"
     description: A Helm chart for Pure Service Orchestrator Explorer
     digest: e30e17e67d1a8b0747b5363159fa73702dd235697c4dedea3e5505824627d4dd
     icon: https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/pso-explorer.png
@@ -46,4 +61,4 @@ entries:
     urls:
     - pso-explorer-v0.5.1.tgz
     version: v0.5.1
-generated: "2020-07-20T16:55:05.386495+02:00"
+generated: "2020-07-28T16:50:23.399203+02:00"
