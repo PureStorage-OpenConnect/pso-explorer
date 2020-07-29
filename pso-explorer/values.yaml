@@ -5,7 +5,7 @@
 images:
   webserver:
     repository: quay.io/purestorage/pso-explorer
-    tag: v0.5.3-devel
+    tag: v0.5.3
     pullPolicy: Always
   redis:
     repository: redis
