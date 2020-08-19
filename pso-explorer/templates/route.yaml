@@ -1,0 +1,19 @@
+{{ if .Capabilities.APIVersions.Has "route.openshift.io/v1" }}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/name: {{ include "pso-explorer.name" . }}
+    helm.sh/chart: {{ include "pso-explorer.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  name: {{ include "pso-explorer.fullname" . }}
+spec:
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: {{ include "pso-explorer.fullname" . }}
+    weight: 100
+  wildcardPolicy: None
+{{ end }}
