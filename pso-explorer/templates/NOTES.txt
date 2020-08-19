@@ -17,10 +17,14 @@
 (_______/|/     \||/       (_______/(_______)|/   \__/(_______/|/   \__/
 
 
-Get the IP address of PSO Explorer by running these commands in the
-same shell:
+{{- if .Capabilities.APIVersions.Has "route.openshift.io/v1" }}
+  export ROUTE=$(oc get route --namespace {{ .Release.Namespace }} | awk 'FNR>1 {print $2}' -)
+  echo "Point your web browser at http://$ROUTE"
 
-{{- if contains "NodePort" .Values.service.type }}
+{{- else if contains "NodePort" .Values.service.type }}
+  echo "Get the IP address of PSO Explorer by running these commands in the"
+  echo "same shell:"
+  echo
   export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} \
     -o jsonpath="{.spec.ports[0].nodePort}" services {{ template "pso-explorer.fullname" . }})
   export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} \
@@ -30,11 +34,13 @@ same shell:
   echo $NODE_IP:$NODE_PORT
 
 {{- else if contains "LoadBalancer" .Values.service.type }}
+  echo "Get the IP address of PSO Explorer by running these commands in the"
+  echo "same shell:"
+  echo
+  echo "!! NOTE: It may take a few minutes for the LoadBalancer IP to be available. !!"
 
-!! NOTE: It may take a few minutes for the LoadBalancer IP to be available. !!
-
-You can watch for EXTERNAL-IP to populate by running:
-  kubectl get svc --namespace {{ .Release.Namespace }} -w {{ template "pso-explorer.fullname" . }}
+  echo "You can watch for EXTERNAL-IP to populate by running:"
+  echo "  kubectl get svc --namespace {{ .Release.Namespace }} -w {{ template "pso-explorer.fullname" . }}"
 
 {{- else if contains "ClusterIP" .Values.service.type }}
   export POD_NAME=$(kubectl get pods \
