@@ -25,6 +25,11 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.images.webserver.repository }}:{{ .Values.images.webserver.tag }}"
           imagePullPolicy: {{ .Values.images.webserver.pullPolicy }}
+          env:
+          - name: PSOX_DASHBOARD_REFRESH
+            value: {{ .Values.timeouts.dashboard_refresh }}
+          - name: PSOX_CACHE_TIMEOUT
+            value: {{ .Values.timeouts.cache_refresh }}
           ports:
             - name: http
               containerPort: 8080
