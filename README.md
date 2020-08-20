@@ -4,6 +4,8 @@
 
 # Pure Service Orchestrator™ Explorer
 
+<img src="./images/psox_logo.png" width="250">
+
 A unified view into storage, empowering Kubernetes admins and storage admins with 360-degree container storage visibility.
 
 ## What is PSO Explorer?
