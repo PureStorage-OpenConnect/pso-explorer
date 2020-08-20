@@ -2,10 +2,19 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+# specify the timeouts in seconds used by PSO Explorer
+timeouts:
+  # determines how often the dashboard view refreshes (page reloads)
+  dashboard_refresh: "60"
+  # determines how long cached data is valid. As long as the cache is valid, no new
+  # data will be fetched from K8S or the Pure Storage systems.
+  cache_refresh: "300"
+
+
 images:
   webserver:
     repository: quay.io/purestorage/pso-explorer
-    tag: v0.5.3
+    tag: v0.5.4
     pullPolicy: Always
   redis:
     repository: redis
