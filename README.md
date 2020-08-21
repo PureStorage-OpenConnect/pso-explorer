@@ -59,6 +59,12 @@ kubectl create namespace <namespace>
 helm install pso-explorer pso-explorer/pso-explorer --namespace <namespace>
 ```
 
+#### Install specifying options via the command line
+
+```bash
+helm install pso-explorer pso-explorer/pso-explorer --namespace <namespace> --set timeouts.dashboard_refresh=30 --set timeouts.cache_refresh=60
+```
+
 #### Install with changed settings (values.yaml)
 
 ```bash
