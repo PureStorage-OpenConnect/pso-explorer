@@ -2,15 +2,15 @@
 [![GitHub Release](https://img.shields.io/github/v/release/PureStorage-OpenConnect/pso-explorer.svg)]()
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
-# Pure Service Orchestrator™ Explorer
+# Pure Service Orchestrator™ eXplorer
 
 <img src="./images/psox_logo.png" width="250">
 
 A unified view into storage, empowering Kubernetes admins and storage admins with 360-degree container storage visibility.
 
-## What is PSO Explorer?
+## What is PSO eXplorer?
 
-Pure Service Orchestrator™ Explorer (or PSO Explorer) provides a web based user interface for [Pure Service Orchestrator™](https://github.com/purestorage/helm-charts). It shows details of the persistent volumes and snapshots that have been provisioned using PSO, showing provisioned space, actual used space, performance and growth characteristics. The PSO Explorer dashboard provides a quick overview of the number of volumes, snapshots, storageclasses and arrays in the cluster, in addition to the volume usage, the volume growth over the last 24 hours and cluster-level performance statistics.
+Pure Service Orchestrator™ eXplorer (or PSO eXplorer) provides a web based user interface for [Pure Service Orchestrator™](https://github.com/purestorage/helm-charts). It shows details of the persistent volumes and snapshots that have been provisioned using PSO, showing provisioned space, actual used space, performance and growth characteristics. The PSO eXplorer dashboard provides a quick overview of the number of volumes, snapshots, storageclasses and arrays in the cluster, in addition to the volume usage, the volume growth over the last 24 hours and cluster-level performance statistics.
 
 ## Software Pre-Requisites
 - [Kubernetes](https://kubernetes.io/) 1.13+
@@ -18,7 +18,7 @@ Pure Service Orchestrator™ Explorer (or PSO Explorer) provides a web based use
 - [Helm3](https://helm.sh/)
 
 ## How to install
-Add the PSO Explorer helm chart repository to your Helm3 repo's:
+Add the PSO eXplorer helm chart repository to your Helm3 repo's:
 
 ```bash
 helm repo add pso-explorer 'https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/'
@@ -33,7 +33,7 @@ You can change the configuraton of the deployment, by downloading the [./pso-exp
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | `timeouts.dashboard_refresh`                   | Timeout in seconds for the dashboard view (home view) to refresh (page reload).                                                                            | `60`                                          |
 | `timeouts.cache_refresh`                       | Timeout in seconds to clear cache, once this timeout is reached updates will be collected from K8S and the Pure Storage systems                            | `300`                                         |
-| `images.webserver.repository`                  | The image repo and name to pull PSO Explorer webserver from                                                                                                | `quay.io/purestorage/pso-explorer`            |
+| `images.webserver.repository`                  | The image repo and name to pull PSO eXplorer webserver from                                                                                                | `quay.io/purestorage/pso-explorer`            |
 | `images.webserver.tag`                         | The image tag to pull                                                                                                                                      | `[release version]`                           |
 | `images.webserver.pullPolicy`                  | Image pull policy                                                                                                                                          | `Always`                                      |
 | `images.redis.repository`                      | The image repo and name to pull redis server from                                                                                                          | `redis`                                       |
