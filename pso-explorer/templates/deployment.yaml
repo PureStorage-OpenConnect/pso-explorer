@@ -46,6 +46,9 @@ spec:
             timeoutSeconds: 30
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: pso-credentials
+              mountPath: /etc/pso-explorer
         - name: redis
           image: "{{ .Values.images.redis.repository }}:{{ .Values.images.redis.tag }}"
           imagePullPolicy: {{ .Values.images.redis.pullPolicy }}
@@ -59,6 +62,9 @@ spec:
         - name: redis-config
           configMap:
             name: {{ include "pso-explorer.fullname" . }}-redis
+        - name: pso-credentials
+          secret:
+            secretName: {{ template "pso-explorer.fullname" . }}-secret
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
