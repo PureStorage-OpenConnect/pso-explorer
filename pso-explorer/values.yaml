@@ -18,7 +18,7 @@ credentials:
   # Username used for authentication
   username: pureuser
   # Hashed password, use the following to create the hash 
-  # htpasswd -bnBC 10 "" password | tr -d ':\n'
+  # htpasswd -bnBC 10 "" 'password' | tr -d ':\n'
   passwordHash: "$2y$10$R1OPJ7MX9qHfps69y/NCv.II/UJGWvHZU/nnNDi6QSFxY90DbZuvS"
 
 images:
@@ -41,8 +41,8 @@ service:
 ## OPTIONALLY you can set .Values.ingress.secretName to set which secret to use
 ##
 ingress:
-  enabled: true
-  tls: true
+  enabled: false
+  tls: false
   hostname: psox.foo.bar
   annotations: {}
     # kubernetes.io/ingress.class: "nginx"
