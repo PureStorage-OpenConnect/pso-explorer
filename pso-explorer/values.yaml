@@ -24,7 +24,7 @@ credentials:
 images:
   webserver:
     repository: quay.io/purestorage/pso-explorer
-    tag: v0.5.6
+    tag: v0.5.7
     pullPolicy: Always
   redis:
     repository: redis
@@ -60,6 +60,7 @@ clusterrolebinding:
 # considered unstable. They are also likely to change before going into production. 
 app:
   alphaFeatures: false
+  debug: false
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
