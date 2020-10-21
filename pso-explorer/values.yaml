@@ -24,7 +24,7 @@ credentials:
 images:
   webserver:
     repository: quay.io/purestorage/pso-explorer
-    tag: v0.5.6-devel
+    tag: v0.5.6
     pullPolicy: Always
   redis:
     repository: redis
