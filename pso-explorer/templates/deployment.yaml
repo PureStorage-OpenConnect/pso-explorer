@@ -62,6 +62,8 @@ spec:
           volumeMounts:
             - name: redis-config
               mountPath: /usr/local/etc/redis
+          securityContext:
+            runAsUser: 1001
       volumes:
         - name: redis-config
           configMap:
