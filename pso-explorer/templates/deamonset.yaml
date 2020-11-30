@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: psox-agent
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: psox-agent
+    helm.sh/chart: {{ include "pso-explorer.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: psox-agent
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: psox-agent
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      serviceAccountName: {{ .Values.clusterrolebinding.serviceAccount.name }}
+      tolerations:
+      # this toleration is to have the daemonset runnable on master nodes
+      # remove it if your masters can't run pods
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
+      containers:
+        - name: psox-agent
+          image: "{{ .Values.images.agent.repository }}:{{ .Values.images.agent.tag }}"
+          imagePullPolicy: {{ .Values.images.agent.pullPolicy }}
+          env:
+          - name: PSOX_NODENAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: PSOX_SERVICENAME
+            value: {{ include "pso-explorer.fullname" . }}
+          - name: PSOX_PINGCOUNT
+            value: {{ .Values.agent.pingCount | quote }}
+          - name: PSOX_REFRESHTIMEOUT
+            value: {{ .Values.agent.refreshTimeout | quote }}
+      terminationGracePeriodSeconds: 30

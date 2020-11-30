@@ -24,12 +24,16 @@ credentials:
 images:
   webserver:
     repository: quay.io/purestorage/pso-explorer
-    tag: v0.5.6
+    tag: v0.5.7
     pullPolicy: Always
   redis:
     repository: redis
     tag: alpine
     pullPolicy: IfNotPresent
+  agent:
+    repository: quay.io/purestorage/psox-agent
+    tag: v0.5.7
+    pullPolicy: Always
 
 # Service.type can be LoadBalancer or ClusterIP
 service:
@@ -60,6 +64,11 @@ clusterrolebinding:
 # considered unstable. They are also likely to change before going into production. 
 app:
   alphaFeatures: false
+  debug: false
+
+agent:
+  pingCount: 3
+  refreshTimeout: 30
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

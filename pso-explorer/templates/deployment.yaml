@@ -34,6 +34,8 @@ spec:
             value: {{ .Values.timeouts.cacheRefresh | quote }}
           - name: PSOX_ALPHA_FEATURES
             value: {{ .Values.app.alphaFeatures | quote }}
+          - name: APP_DEBUG
+            value: {{ .Values.app.debug | quote }}
           ports:
             - name: http
               containerPort: 8080
@@ -62,6 +64,9 @@ spec:
           volumeMounts:
             - name: redis-config
               mountPath: /usr/local/etc/redis
+          securityContext:
+            runAsUser: 1000
+            runAsNonRoot: true            
       volumes:
         - name: redis-config
           configMap:
