@@ -19,6 +19,7 @@ spec:
         app.kubernetes.io/name: psox-agent
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ .Values.clusterrolebinding.serviceAccount.name }}
       tolerations:
       # this toleration is to have the daemonset runnable on master nodes
       # remove it if your masters can't run pods

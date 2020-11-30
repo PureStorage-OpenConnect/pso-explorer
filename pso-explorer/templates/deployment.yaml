@@ -65,7 +65,8 @@ spec:
             - name: redis-config
               mountPath: /usr/local/etc/redis
           securityContext:
-            runAsUser: 1001
+            runAsUser: 1000
+            runAsNonRoot: true            
       volumes:
         - name: redis-config
           configMap:
