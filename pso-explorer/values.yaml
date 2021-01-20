@@ -24,7 +24,7 @@ credentials:
 images:
   webserver:
     repository: quay.io/purestorage/pso-explorer
-    tag: v0.5.7
+    tag: v0.5.8
     pullPolicy: Always
   redis:
     repository: redis
@@ -32,7 +32,7 @@ images:
     pullPolicy: IfNotPresent
   agent:
     repository: quay.io/purestorage/psox-agent
-    tag: v0.5.7
+    tag: v0.5.8
     pullPolicy: Always
 
 # Service.type can be LoadBalancer or ClusterIP
