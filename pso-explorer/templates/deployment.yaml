@@ -20,6 +20,7 @@ spec:
         app.kubernetes.io/name: {{ include "pso-explorer.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      serviceAccount: {{ .Values.clusterrolebinding.serviceAccount.name }}
       serviceAccountName: {{ .Values.clusterrolebinding.serviceAccount.name }}
       containers:
         - name: {{ .Chart.Name }}
@@ -64,9 +65,6 @@ spec:
           volumeMounts:
             - name: redis-config
               mountPath: /usr/local/etc/redis
-          securityContext:
-            runAsUser: 1000
-            runAsNonRoot: true            
       volumes:
         - name: redis-config
           configMap:
