@@ -4,6 +4,8 @@
 
 # Pure Service Orchestrator™ eXplorer
 
+## !!Stop here!! - PSO eXplorer is EOL by July 31 2022 and End of Support by Oct 31, 2022.
+
 <img src="./images/psox_logo.png" width="250">
 
 A unified view into storage, empowering Kubernetes admins and storage admins with 360-degree container storage visibility.
